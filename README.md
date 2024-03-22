@@ -32,13 +32,11 @@
     - Webpage
     - Canvas
   - Give sketch a name and save it
-
 - Take a look at the template
   - `createCanvas()`
     - Change size
   - `background()`
     - Change color
-
 - Write our own code
   - Drawing a circle
     - `circle()`
@@ -61,7 +59,6 @@
     - `fill()` & `noFill()`
     - `stroke()` & `noStroke()`
     - Specifying both minimum and maximum values for `random()`
-
 - Exercise
   - Draw random shapes
     - `if` statements
@@ -74,7 +71,6 @@
   - [Writing with hand](https://www.instagram.com/p/CyuxLEPA136/)
   - [Camera following hand](https://www.instagram.com/p/Cy4ZKwnrL_b/)
   - Interactive melody with [mouse](https://www.instagram.com/p/C4KnkS_uIkg/) vs [hand](https://www.instagram.com/p/C4WozrtsZ4r/)
-
 - Working with webcam
   - Bare minimum
     - `createCapture(VIDEO)`
@@ -102,7 +98,6 @@
             - Identifying `<script>` for p5.js within `<head>` and `</head>`
             - Add `<script>` for ml5.js
                - `<script src="https://unpkg.com/ml5@0.20.0-alpha.3/dist/ml5.js"></script> `
-
 - handPose basics
   - In `preload()`
     - `handPose = ml5.handPose();`
@@ -131,7 +126,6 @@
         - Display keypoint indices
           - `for (const i = 0; i < hand.keypoints.length; i++)`
           - `text()`
-
 - Exercise
   - Draw something between two hands
   - `if (hands.length >= 2)`
