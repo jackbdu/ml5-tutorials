@@ -16,8 +16,8 @@
 
 ## p5.js Basics
 
-- [p5.js Web Editor](https://editor.p5js.org/)
-  - Creating an account
+- 0.0 [p5.js Web Editor](https://editor.p5js.org/)
+  - 0.0.1 Creating an account
     - Saving sketches
     - Saving settings
       - Theme
@@ -25,42 +25,47 @@
       - Autosave
       - Autoclose Brackets and Quotes
       - Autocomplete
-  - Code editor
+  - 0.0.2 Code editor
     - `setup()` & `draw()`
-  - Run code
-  - Preview
+  - 0.0.3 Run code
+  - 0.0.4 Preview
     - Webpage
     - Canvas
   - Give sketch a name and save it
-- Take a look at the template
+- 0.1 [Take a look at the template](https://editor.p5js.org/jackbdu/sketches/FRNrT6mI7)
   - `createCanvas()`
     - Change size
   - `background()`
     - Change color
-- Write our own code
-  - Drawing a circle
+- 0.2 Write our own code
+  - 0.2.1 [Drawing a circle](https://editor.p5js.org/jackbdu/sketches/PckAgQY7g)
     - `circle()`
       - `x`, `y`, `d`
     - Other shapes
       - [p5.js reference page](https://p5js.org/reference/)
-  - Drawing a circle with variables
+  - 0.2.2 [Drawing a circle with variables](https://editor.p5js.org/jackbdu/sketches/aTcRbaxqq)
     - `let` & `const`
-  - Making the circle move
+  - 0.2.3 [Making the circle move](https://editor.p5js.org/jackbdu/sketches/LYPJCghGt)
+    - Change variables defined with `let`
     - `+=` & `-=`
     - `++` & `--`
-  - Making the circle interactive (special variables)
-    - `mouseX` & `mouseY`
-    - Putting `background()` in `draw()` vs in `setup()`
-  - Drawing circles at random positions
+  - 0.2.4 Making the circle interactive (special variables)
+    - 0.2.4.1 [Moving circle with mouse](https://editor.p5js.org/jackbdu/sketches/qGghBx2Ud)
+      - `mouseX` & `mouseY`
+    - 0.2.4.2 [Drawing circles with mouse](https://editor.p5js.org/jackbdu/sketches/tJ11IuF55)
+      - Putting `background()` in `draw()` vs in `setup()`
+    - 0.2.4.3 [Drawing circles by pressing mouse](https://editor.p5js.org/jackbdu/sketches/chSD3Bb3z)
+      - `mouseIsPressed`
+  - 0.2.5 [Drawing circles at random positions](https://editor.p5js.org/jackbdu/sketches/5NuNw84XX)
     - `random()`
       - Specifying maximum value for `random()`
       - `width` & `height`
-  - Drawing circles with random colors
+  - 0.2.6 [Drawing circles with random colors](https://editor.p5js.org/jackbdu/sketches/Rio-Yif_A)
     - `fill()` & `noFill()`
     - `stroke()` & `noStroke()`
-    - Specifying both minimum and maximum values for `random()`
-- Exercise
-  - Draw random shapes
+    - [Specifying both minimum and maximum values](https://editor.p5js.org/jackbdu/sketches/r3ntC8YyI) for `random()`
+- 0.3 Exercise
+  - 0.3.1 Draw random shapes
     - `if` statements
     - Specifying an list (array) of choices (elements) for `random()`
       - `['circle', 'square']`
