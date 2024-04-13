@@ -1,137 +1,17 @@
 # Machine Learning for Absolute Beginners (with ml5.js)
 
-## Introductions
+- [Introduction](./introduction)
 
-- Overview
-  - What is [ml5.js](https://ml5js.org) and [ml5-next-gen](https://github.com/ml5js/ml5-next-gen/)?
-    - Why ml5.js?
-    - What is [tensorflow.js](https://www.tensorflow.org/js)?
-    - Why JavaScript?
-  - What is [p5.js](https://p5js.org/)?
-    - Why p5.js?
-  - p5.js and ml5.js examples
-    - [ml5.js community page](https://ml5js.org/community)
-    - [p5.js showcase page](https://showcase.p5js.org/)
-    - [Daily Sketches (2022)](https://jackbdu.com/works/daily-sketches/)
+- [p5.js fundamentals](./00-p5js-fundamentals)
 
-## p5.js Basics
+- [ml5.handPose](./01-ml5-handpose)
 
-- 0.0 [p5.js Web Editor](https://editor.p5js.org/)
-  - 0.0.1 Creating an account
-    - Saving sketches
-    - Saving settings
-      - Theme
-      - Text size
-      - Autosave
-      - Autoclose Brackets and Quotes
-      - Autocomplete
-  - 0.0.2 Code editor
-    - `setup()` & `draw()`
-  - 0.0.3 Run code
-  - 0.0.4 Preview
-    - Webpage
-    - Canvas
-  - Give sketch a name and save it
-- 0.1 [Take a look at the template](https://editor.p5js.org/jackbdu/sketches/FRNrT6mI7)
-  - `createCanvas()`
-    - Change size
-  - `background()`
-    - Change color
-- 0.2 Write our own code
-  - 0.2.1 [Drawing a circle](https://editor.p5js.org/jackbdu/sketches/PckAgQY7g)
-    - `circle()`
-      - `x`, `y`, `d`
-    - Other shapes
-      - [p5.js reference page](https://p5js.org/reference/)
-  - 0.2.2 [Drawing a circle with variables](https://editor.p5js.org/jackbdu/sketches/aTcRbaxqq)
-    - `let` & `const`
-  - 0.2.3 [Making the circle move](https://editor.p5js.org/jackbdu/sketches/LYPJCghGt)
-    - Change variables defined with `let`
-    - `+=` & `-=`
-    - `++` & `--`
-  - 0.2.4 Making the circle interactive (special variables)
-    - 0.2.4.1 [Moving circle with mouse](https://editor.p5js.org/jackbdu/sketches/qGghBx2Ud)
-      - `mouseX` & `mouseY`
-    - 0.2.4.2 [Drawing circles with mouse](https://editor.p5js.org/jackbdu/sketches/tJ11IuF55)
-      - Putting `background()` in `draw()` vs in `setup()`
-    - 0.2.4.3 [Drawing circles by pressing mouse](https://editor.p5js.org/jackbdu/sketches/chSD3Bb3z)
-      - `mouseIsPressed`
-  - 0.2.5 [Drawing circles at random positions](https://editor.p5js.org/jackbdu/sketches/5NuNw84XX)
-    - `random()`
-      - Specifying maximum value for `random()`
-      - `width` & `height`
-  - 0.2.6 [Drawing circles with random colors](https://editor.p5js.org/jackbdu/sketches/Rio-Yif_A)
-    - `fill()` & `noFill()`
-    - `stroke()` & `noStroke()`
-    - [Specifying both minimum and maximum values](https://editor.p5js.org/jackbdu/sketches/r3ntC8YyI) for `random()`
-- 0.3 Exercise
-  - 0.3.1 Draw random shapes
-    - `if` statements
-    - Specifying an list (array) of choices (elements) for `random()`
-      - `['circle', 'square']`
+- ml5.bodyPose
 
-## ml5.handPose
+- ml5.faceMesh
 
-- handPose examples
-  - [Writing with hand](https://www.instagram.com/p/CyuxLEPA136/)
-  - [Camera following hand](https://www.instagram.com/p/Cy4ZKwnrL_b/)
-  - Interactive melody with [mouse](https://www.instagram.com/p/C4KnkS_uIkg/) vs [hand](https://www.instagram.com/p/C4WozrtsZ4r/)
-- Working with webcam
-  - Bare minimum
-    - `createCapture(VIDEO)`
-      - See `<video>` appear outside canvas
-    - `image()`
-      - Defining variables in the global scope (outside `setup()` and `draw()` functions) for sharing between `setup()` and `draw()`
-      - See video appear on canvas
-  - Tinkering
-    - `createCanvas(640, 480)`
-    - `video.size()`
-      - Reviewing `width` & `height`
-      - See `<video>` size changes
-    - Resizing video with `image()`
-      - `<video>` size remains
-      - handPose uses `<video>` as the reference
-    - `video.hide()`
-- Adding ml5.js library
-  - Sketch Files
-    - sketch.js
-    - style.css
-    - index.html
-      - HTML tags come in pairs
-        - `<head></head>` & `<body></body>`
-        - `<script></script>` tags
-            - Identifying `<script>` for p5.js within `<head>` and `</head>`
-            - Add `<script>` for ml5.js
-               - `<script src="https://unpkg.com/ml5@0.20.0-alpha.3/dist/ml5.js"></script> `
-- handPose basics
-  - In `preload()`
-    - `handPose = ml5.handPose();`
-  - In `setup()`
-    - `handPose.detectStart(video, function() {})`
-      - `console.log(’hand detected’)`
-      - callback functions
-        - `function(){}` vs `gotHands`
-  - `gotHands(results)`
-    - `console.log(results)`
-    - `hands = results`
-  - `draw()`
-    - `if` statements
-      - `if (hands !== [])`
-      - `if (hands.length > 0)`
-    - array
-      - `hands[0]`
-        - `console.log(hands[0])`
-      - `hands[0].index_finger_tip`
-    - Draw circle at index finger tip
-    - Apply to more than one hand
-      - `for` loops
-        - `for (const hand of hands)`
-        - Display all keypoints
-          - `for (const keypoint of hand.keypoints)`
-        - Display keypoint indices
-          - `for (const i = 0; i < hand.keypoints.length; i++)`
-          - `text()`
-- Exercise
-  - Draw something between two hands
-  - `if (hands.length >= 2)`
-  - `hands[0]` and `hands[1]`
+- ml5.bodySegmentation
+
+- ml5.neuralNetwork
+
+- ml5.imageClassifier

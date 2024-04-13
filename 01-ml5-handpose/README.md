@@ -1,0 +1,65 @@
+# ml5.handPose
+
+- handPose examples
+  - [Writing with hand](https://www.instagram.com/p/CyuxLEPA136/)
+  - [Camera following hand](https://www.instagram.com/p/Cy4ZKwnrL_b/)
+  - Interactive melody with [mouse](https://www.instagram.com/p/C4KnkS_uIkg/) vs [hand](https://www.instagram.com/p/C4WozrtsZ4r/)
+- Working with webcam
+  - Bare minimum
+    - `createCapture(VIDEO)`
+      - See `<video>` appear outside canvas
+    - `image()`
+      - Defining variables in the global scope (outside `setup()` and `draw()` functions) for sharing between `setup()` and `draw()`
+      - See video appear on canvas
+  - Tinkering
+    - `createCanvas(640, 480)`
+    - `video.size()`
+      - Reviewing `width` & `height`
+      - See `<video>` size changes
+    - Resizing video with `image()`
+      - `<video>` size remains
+      - handPose uses `<video>` as the reference
+    - `video.hide()`
+- Adding ml5.js library
+  - Sketch Files
+    - sketch.js
+    - style.css
+    - index.html
+      - HTML tags come in pairs
+        - `<head></head>` & `<body></body>`
+        - `<script></script>` tags
+            - Identifying `<script>` for p5.js within `<head>` and `</head>`
+            - Add `<script>` for ml5.js
+               - `<script src="https://unpkg.com/ml5@0.20.0-alpha.3/dist/ml5.js"></script> `
+- handPose basics
+  - In `preload()`
+    - `handPose = ml5.handPose();`
+  - In `setup()`
+    - `handPose.detectStart(video, function() {})`
+      - `console.log(’hand detected’)`
+      - callback functions
+        - `function(){}` vs `gotHands`
+  - `gotHands(results)`
+    - `console.log(results)`
+    - `hands = results`
+  - `draw()`
+    - `if` statements
+      - `if (hands !== [])`
+      - `if (hands.length > 0)`
+    - array
+      - `hands[0]`
+        - `console.log(hands[0])`
+      - `hands[0].index_finger_tip`
+    - Draw circle at index finger tip
+    - Apply to more than one hand
+      - `for` loops
+        - `for (const hand of hands)`
+        - Display all keypoints
+          - `for (const keypoint of hand.keypoints)`
+        - Display keypoint indices
+          - `for (const i = 0; i < hand.keypoints.length; i++)`
+          - `text()`
+- Exercise
+  - Draw something between two hands
+  - `if (hands.length >= 2)`
+  - `hands[0]` and `hands[1]`
