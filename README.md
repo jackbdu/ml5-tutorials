@@ -15,3 +15,7 @@
 - ml5.neuralNetwork
 
 - ml5.imageClassifier
+
+- [Resources](./resources)
+
+- [Inspirations](./inspirations)

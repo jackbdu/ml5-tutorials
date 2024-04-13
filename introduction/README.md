@@ -1,4 +1,4 @@
-## Introductions
+# Introductions
 
 - What is [ml5.js](https://ml5js.org) and [ml5-next-gen](https://github.com/ml5js/ml5-next-gen/)?
     - Why ml5.js?
