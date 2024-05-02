@@ -1,9 +1,30 @@
 # ml5.handPose
 
+We are going to start our ml5.js journey with pretrained models. Pretrained models are machine learning models that are trained to perform a specific task. In this chapter, we are going to learn how to use `handPose`, a pre-trained model that recognizes and hands in images and provides us with a list of coordinates of key features of each hand.
+
+Before we start, let's take a look at a few of my sketches incorporating `handPose` to get an idea of what it is capable of.
+
+  - [Writing text on screen with hand](https://www.instagram.com/p/CyuxLEPA136/)
+  - [Camera zooming-in and following hand](https://www.instagram.com/p/Cy4ZKwnrL_b/)
+  - [Drawing melodies with hand](https://www.instagram.com/p/C4WozrtsZ4r/)
+
+## Webcam Setup
+
+In this tutorial, we are going to track our hand pose in real-time with a webcam. Let's start by learning how to work with a webcam in p5.js.
+
+In order to get a video feed from our webcam, we need to use the [`createCapture()`](https://p5js.org/reference/#/p5/createCapture) function. This function supports both capturing video and audio. Since we are only going to be working with video, we need to pass in `VIDEO` as an argument. Variables that are all caps like `VIDEO` are another kind of "speical" variables that p5.js provides for specific scenarios like this. Whenever we enter a keyword that is a part of the p5.js library, the Web Editor recognizes it and highlight it in a different color. This is one way we can tell whether or not we typed the keyword correctly.
+
+```javascript
+function setup() {
+  createCanvas(400, 400);
+  createCapture(VIDEO);
+}
+
+function draw() {
+  background(220);
+}
+```
 - handPose examples
-  - [Writing with hand](https://www.instagram.com/p/CyuxLEPA136/)
-  - [Camera following hand](https://www.instagram.com/p/Cy4ZKwnrL_b/)
-  - Interactive melody with [mouse](https://www.instagram.com/p/C4KnkS_uIkg/) vs [hand](https://www.instagram.com/p/C4WozrtsZ4r/)
 - Working with webcam
   - Bare minimum
     - `createCapture(VIDEO)`
