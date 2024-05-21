@@ -1,5 +1,3 @@
-# Machine Learning for Absolute Beginners (with ml5.js)
-
 - [Introduction](./introduction)
 
 - [p5.js fundamentals](./00-p5js-fundamentals)
